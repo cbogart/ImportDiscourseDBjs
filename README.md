@@ -20,7 +20,7 @@ permission to access.
 3. Put cert.p12 in the src directory; this identifies us as a legitimate proxy for discoursedb users
 4. Put discoursedb.query.properties in the src directory, substituting in the password you invented in step (2)
 5. Put discourseDbSelector.html in the latest oli/temp/deploy/*.war directory
-6. Add this component to the Learnsphere database.  Sample SQL:
+6. Add this component to the Learnsphere database (analysis_db in mysql).  Sample SQL:
 
     INSERT INTO `workflow_component` (`component_type`, `component_name`, `tool_dir`, `schema_path`, `interpreter_path`, `tool_path`, `enabled`, `author`, `citation`, `version`, `info`) VALUES ('Import', 'ImportDiscourseDBjs', '/datashop/workflow_components/ImportDiscourseDBjs/', '/datashop/workflow_components/ImportDiscourseDBjs/schemas/ImportDiscourseDBjs_v1_0.xsd', '/usr/bin/java -jar', '/datashop/workflow_components/ImportDiscourseDBjs/dist/ImportDiscourseDBjs-1.0.jar', 1, 'cbogart', 'https://github.com/LearnSphere/WorkflowComponents/tree/master/ImportDiscourseDBjs', '1.0', NULL);
 
